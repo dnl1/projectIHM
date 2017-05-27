@@ -200,7 +200,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>database.mdf</DependentUpon>
     </Content>
+    <Content Include="images\article.png" />
+    <Content Include="images\articlemin.png" />
+    <None Include="images\icon-group.jpg" />
+    <Content Include="images\revision.png" />
+    <Content Include="images\revisionmin.png" />
+    <Content Include="images\vincular.jpg" />
     <None Include="images\iconUser.png" />
+    <Content Include="images\avaliacao-icon.jpg" />
+    <Content Include="images\group-icon.jpg" />
     <Content Include="images\login.png" />
   </ItemGroup>
   <ItemGroup>

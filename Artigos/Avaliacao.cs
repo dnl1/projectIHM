@@ -89,7 +89,7 @@ namespace Artigos
             Conexao conn = new Conexao();
             SqlConnection ConnectOpen = conn.ConnectToDatabase();
 
-            string strCommand = string.Format("SELECT Avaliacao.* FROM Avaliacao INNER JOIN Artigo ON Avaliacao.artigo_id = Artigo.id WHERE Artigo.author_id = '{0}' ", Usuario.Logado.usuario);
+            string strCommand = string.Format("SELECT Av.ID AS 'ID', Ar.title AS 'Título', Av.revisor_id AS 'Revisor' FROM Avaliacao AS Av INNER JOIN Artigo AS Ar ON Av.artigo_id = Ar.id WHERE Ar.author_id = '{0}' ", Usuario.Logado.usuario);
             SqlDataAdapter da = new SqlDataAdapter(strCommand, ConnectOpen);
             DataSet ds = new DataSet();
 

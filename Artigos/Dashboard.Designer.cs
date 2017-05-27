@@ -31,12 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnMinhasAvaliacoes = new System.Windows.Forms.Button();
             this.btnVincularRevisor = new System.Windows.Forms.Button();
             this.btnCadastrarArea = new System.Windows.Forms.Button();
             this.btnRevisarArtigo = new System.Windows.Forms.Button();
             this.btnCadastrarArtigo = new System.Windows.Forms.Button();
             this.btnCadastrarUsuario = new System.Windows.Forms.Button();
-            this.btnMinhasAvaliacoes = new System.Windows.Forms.Button();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -45,10 +48,43 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "login.png");
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1241, 28);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 24);
+            this.toolStripMenuItem1.Text = "Logout";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // btnMinhasAvaliacoes
+            // 
+            this.btnMinhasAvaliacoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinhasAvaliacoes.Image = global::Artigos.Properties.Resources.avaliacao_icon;
+            this.btnMinhasAvaliacoes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMinhasAvaliacoes.Location = new System.Drawing.Point(830, 50);
+            this.btnMinhasAvaliacoes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinhasAvaliacoes.Name = "btnMinhasAvaliacoes";
+            this.btnMinhasAvaliacoes.Size = new System.Drawing.Size(124, 100);
+            this.btnMinhasAvaliacoes.TabIndex = 5;
+            this.btnMinhasAvaliacoes.Text = "Minhas Avaliações";
+            this.btnMinhasAvaliacoes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMinhasAvaliacoes.UseVisualStyleBackColor = true;
+            this.btnMinhasAvaliacoes.Click += new System.EventHandler(this.btnMinhasAvaliacoes_Click);
+            // 
             // btnVincularRevisor
             // 
             this.btnVincularRevisor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVincularRevisor.Image = ((System.Drawing.Image)(resources.GetObject("btnVincularRevisor.Image")));
+            this.btnVincularRevisor.Image = global::Artigos.Properties.Resources.vincular;
             this.btnVincularRevisor.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnVincularRevisor.Location = new System.Drawing.Point(677, 50);
             this.btnVincularRevisor.Margin = new System.Windows.Forms.Padding(4);
@@ -63,7 +99,7 @@
             // btnCadastrarArea
             // 
             this.btnCadastrarArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCadastrarArea.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarArea.Image")));
+            this.btnCadastrarArea.Image = global::Artigos.Properties.Resources.icon_group;
             this.btnCadastrarArea.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCadastrarArea.Location = new System.Drawing.Point(524, 50);
             this.btnCadastrarArea.Margin = new System.Windows.Forms.Padding(4);
@@ -121,21 +157,6 @@
             this.btnCadastrarUsuario.UseVisualStyleBackColor = true;
             this.btnCadastrarUsuario.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnMinhasAvaliacoes
-            // 
-            this.btnMinhasAvaliacoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinhasAvaliacoes.Image = ((System.Drawing.Image)(resources.GetObject("btnMinhasAvaliacoes.Image")));
-            this.btnMinhasAvaliacoes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMinhasAvaliacoes.Location = new System.Drawing.Point(830, 50);
-            this.btnMinhasAvaliacoes.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMinhasAvaliacoes.Name = "btnMinhasAvaliacoes";
-            this.btnMinhasAvaliacoes.Size = new System.Drawing.Size(124, 100);
-            this.btnMinhasAvaliacoes.TabIndex = 5;
-            this.btnMinhasAvaliacoes.Text = "Minhas Avaliações";
-            this.btnMinhasAvaliacoes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMinhasAvaliacoes.UseVisualStyleBackColor = true;
-            this.btnMinhasAvaliacoes.Click += new System.EventHandler(this.btnMinhasAvaliacoes_Click);
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -147,12 +168,18 @@
             this.Controls.Add(this.btnRevisarArtigo);
             this.Controls.Add(this.btnCadastrarArtigo);
             this.Controls.Add(this.btnCadastrarUsuario);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar artigos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Dashboard_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -165,6 +192,8 @@
         private System.Windows.Forms.Button btnCadastrarArea;
         private System.Windows.Forms.Button btnVincularRevisor;
         private System.Windows.Forms.Button btnMinhasAvaliacoes;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

@@ -16,9 +16,8 @@ namespace Artigos
         private void Dashboard_Load(object sender, EventArgs e)
         {
             var frmLogin = new Login();
-            frmLogin.ShowDialog();
 
-            if (frmLogin.logado == false)
+            if (Usuario.Logado.usuario == string.Empty)
             {
                 Close();
             }
@@ -95,6 +94,15 @@ namespace Artigos
         {
             var form = new MinhasAvaliacoes();
             form.ShowDialog();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Usuario.Logoff();
+            this.Hide();
+            var form = new Login();
+            form.ShowDialog();
+            this.Close();
         }
     }
 }

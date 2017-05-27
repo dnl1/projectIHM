@@ -86,7 +86,7 @@ namespace Artigos
 
             if (areas.Length == 0) return new DataSet();
 
-            string strCommand = string.Format("Select * from Artigo where area_id IN ({0})", areas);
+            string strCommand = string.Format("Select id AS ID, description AS Descrição, title AS Título, author_id AS Autor from Artigo where area_id IN ({0})", areas);
             SqlDataAdapter da = new SqlDataAdapter(strCommand, ConnectOpen);
             DataSet ds = new DataSet();
 

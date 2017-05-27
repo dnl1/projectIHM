@@ -13,7 +13,6 @@ namespace Artigos
 {
     public partial class Login : Form
     {
-        public bool logado = false;
         private Conexao conn;
         public static SqlConnection ConnectOpen;
         public static int perfilUsuario;
@@ -37,7 +36,6 @@ namespace Artigos
             if (dt.Rows.Count > 0)
             {
                 this.Hide();
-                logado = true;
 
                 DataRow row = dt.Rows[0];
 
@@ -49,6 +47,8 @@ namespace Artigos
                 User.perfil= (ePerfil)int.Parse(row[1].ToString());
 
                 Usuario._logadoInstance = User;
+                var form = new Dashboard();
+                form.ShowDialog();
             }
             else
                 MessageBox.Show("Usuário ou senha incorreto(s)!");

@@ -63,6 +63,36 @@ namespace Artigos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap article {
+            get {
+                object obj = ResourceManager.GetObject("article", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap avaliacao_icon {
+            get {
+                object obj = ResourceManager.GetObject("avaliacao-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_group {
+            get {
+                object obj = ResourceManager.GetObject("icon-group", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconUser {
             get {
                 object obj = ResourceManager.GetObject("iconUser", resourceCulture);
@@ -86,6 +116,16 @@ namespace Artigos.Properties {
         internal static System.Drawing.Bitmap login1 {
             get {
                 object obj = ResourceManager.GetObject("login1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vincular {
+            get {
+                object obj = ResourceManager.GetObject("vincular", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

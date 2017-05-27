@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
@@ -86,6 +87,11 @@ namespace Artigos
             }
 
             return retorno;
+        }
+
+        internal static void Logoff()
+        {
+            _logadoInstance = new Usuario();
         }
     }
 }
